@@ -1,88 +1,85 @@
-# Savra
+<div align="center">
+  <img src="assets/icon.png" width="128" height="128" alt="Savra Icon">
+  <h1>Savra</h1>
+  <p><strong>Universal Game Save Manager & Sync Tool</strong></p>
 
-Savra is a modern, premium game save synchronization tool built with React, TypeScript, and Electron. It allows you to track your game library, create local and cloud checkpoints, and sync your progress seamlessly across devices using Google Drive and GitHub.
+  <p>
+    <img src="https://img.shields.io/badge/Electron-47848f?style=for-the-badge&logo=electron&logoColor=white" alt="Electron">
+    <img src="https://img.shields.io/badge/React-20232a?style=for-the-badge&logo=react&logoColor=61dafb" alt="React">
+    <img src="https://img.shields.io/badge/TypeScript-007acc?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+    <img src="https://img.shields.io/badge/Tailwind_CSS-38b2ac?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind">
+  </p>
+</div>
 
-![Savra Dashboard](https://github.com/darkbitt/Savra/blob/main/photos/dashboard.png?raw=true)
+---
 
-## Built With
+## 🌟 Overview
 
-- **Frontend**: [React 19](https://react.dev/), [Vite](https://vitejs.dev/)
-- **Desktop Framework**: [Electron](https://www.electronjs.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **UI Components**: [shadcn/ui](https://ui.shadcn.com/) (powered by [Radix UI](https://www.radix-ui.com/))
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Backend & Storage**: [Firebase](https://firebase.google.com/), [Supabase](https://supabase.com/)
-- **Cloud APIs**: Google Drive API, IGDB API, Steam API
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
+**Savra** is a professional-grade game save synchronization tool designed for enthusiasts. Built with a focus on speed, reliability, and a premium user experience, Savra bridges the gap between your local game library and the cloud.
 
-## Features
+![Savra Hero Screenshot](assets/Screenshot%202026-03-06%20094240.png)
 
-- **🎮 Comprehensive Library Management**: Auto-detect installed games or add them manually.
-- **☁️ Cloud Synchronization**: Seamlessly sync checkpoints to Google Drive and GitHub Releases.
-- **🕒 Checkpoint System**: Create individual or folder-based checkpoints with detailed metadata.
-- **📂 Orphan Support**: Manage checkpoints even for games no longer in your library.
-- **📊 Storage Visualizer**: Monitor your local, Google Drive, and GitHub storage usage.
-- **🔍 Real-time Discovery**: Scan your system for game manifests and save locations.
-- **🎨 Premium UI**: Dark, glassmorphic design inspired by modern gaming dashboards.
+## ✨ Core Features
 
-## Prerequisites
+- **🎮 Intelligent Library**: Auto-detects installed games across Steam, Epic, and popular repacks.
+- **☁️ Native Cloud Sync**: Seamless integration with Google Drive and GitHub Releases for secure, versioned backups.
+- **🕒 Checkpoint Engine**: Create unlimited checkpoints for any game, allowing you to roll back progress at any time.
+- **🔍 Advanced Discovery**: Deep-system scanning for manifests and save file locations without performance impact.
+- **🎨 Premium Aesthetics**: A sleek, dark, glassmorphic UI designed to look beautiful on high-resolution displays.
+- **📂 Orphan Management**: Keep your saves safe even after a game is uninstalled.
 
-- [Node.js](https://nodejs.org/) (v18 or higher recommended)
-- [npm](https://www.npmjs.com/) (usually comes with Node.js)
+## 🛠️ Built With
 
-## Getting Started
+*   **Logic**: [React 19](https://react.dev/) & [TypeScript](https://www.typescriptlang.org/)
+*   **Shell**: [Electron](https://www.electronjs.org/)
+*   **Styling**: [Tailwind CSS](https://tailwindcss.com/) & [shadcn/ui](https://ui.shadcn.com/)
+*   **Motion**: [Framer Motion](https://www.framer.com/motion/)
+*   **Backing**: [Firebase](https://firebase.google.com/)
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/darkbitt/Savra.git
-cd Savra
-```
+---
 
-### 2. Install Dependencies
-```bash
-npm install
-```
+## 🚀 Getting Started
 
-### 3. Configure Environment Variables
-Copy the `.env.example` file to a new file named `.env` and fill in your API credentials:
-```bash
-cp .env.example .env
-```
-You will need to set up:
-- **Twitch (IGDB)**: For game metadata and search.
-- **Google Cloud Console**: For Google Drive sync and Auth.
-- **Steam API**: For Steam game discovery.
-- **Supabase**: For banner hosting and storage.
+### Prerequisites
+- **Node.js**: v18+
+- **npm**: Integrated with Node.js
 
-### 4. Firebase Setup
-This app requires a Firebase Service Account file for backend database operations.
-1. Generate a new private key from your Firebase Console (**Project Settings > Service Accounts**).
-2. Save the downloaded JSON file as `electron/firebase-service-account.json`.
-3. **DO NOT** commit this file to any public repository (it is already in `.gitignore`).
+### Quick Installation
 
-### 5. Run in Development
-```bash
-npm run electron:dev
-```
+1.  **Clone the Repository**
+    ```bash
+    git clone https://github.com/darkbitt/Savra.git
+    cd Savra
+    ```
 
-## Building for Production
+2.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
 
-To create a distributable installer for your OS:
+3.  **Environment Setup**
+    - Copy `.env.example` to `.env`
+    - Configure your IGDB, Google Cloud, and Steam API keys.
+    - Place your `firebase-service-account.json` in the `electron/` directory.
+
+4.  **Launch Development Environment**
+    ```bash
+    npm run electron:dev
+    ```
+
+---
+
+## 📦 Building for Production
+
+Create a high-performance installer for your platform:
 ```bash
 npm run app:build
 ```
-The output will be available in the `dist_electron` directory.
-
-## Maintenance & Logs
-If you encounter issues, you can access logs via **Settings > Maintenance & Logs**.
-- **Activity Log**: Human-readable history of app operations.
-- **Technical Logs**: Raw Electron logs stored in the user data directory.
-
-## GitHub Reconciliation
-If your cloud checkpoints aren't showing up, use the **"Refresh from Cloud"** button in the Cloud Checkpoints tab to force a direct scan of your Google Drive.
-
-## License
-Distributed under the MIT License. See `LICENSE` for more information.
+Find your build in `dist_electron/`.
 
 ---
-Built with ❤️ by [darkbitt](https://github.com/darkbitt)
+
+<div align="center">
+  <p>Built with ❤️ by <a href="https://github.com/darkbitt">darkbitt</a></p>
+  <img src="https://img.shields.io/github/license/darkbitt/Savra?style=flat-square" alt="License">
+</div>
