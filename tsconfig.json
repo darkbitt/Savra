@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es2020", // Specifies the JavaScript language version for emitted JavaScript code.
+    "lib": ["dom", "dom.iterable", "esnext"], // Necessary for JSX and modern APIs
+    "jsx": "react-jsx", // <-- CRITICAL CHANGE: Enables the new JSX transform (React 17+)
+    "baseUrl": ".", // Base directory to resolve non-absolute module names.
+    "paths": { // Your correct path aliases
+      "@/components/*": ["./src/components/*"],
+      "@/src*": ["./src/*"],
+      "@utils/*": ["./libs/utils/*"],
+      "@libs/*": ["./libs/*"],
+      "@/*": ["./src/*"]
+    },
+    "esModuleInterop": true, // Enables emit interoperability between CommonJS and ES Modules.
+    "module": "esnext", // Specify the module code generation for modern environments.
+    "moduleResolution": "node", // Determine how modules are resolved.
+    "allowJs": true, // Allow JavaScript files to be compiled.
+    "skipLibCheck": true, // Skip type checking of all declaration files (*.d.ts).
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file.
+    "noEmit": true, // Do not emit outputs (JavaScript, declaration files, or sourcemaps) - handled by Vite
+    "resolveJsonModule": true, // Enable importing .json files.
+    "isolatedModules": true, // Ensure that each file can be safely transpiled without relying on other imports.
+    // "strict": true, // You had this off in your "old config" to reduce TS70xx errors.
+                     // You can re-enable this later for more robust type checking.
+                     // For now, let's keep it implicitly off (by not adding it) or explicitly set to false if you prefer.
+                     // If you add "strict": false, it will keep your current level of strictness.
+                     // If you don't add it, default behavior may apply, which can be less strict.
+                     // For consistency with your "old config" having fewer errors, we'll omit 'strict' for now, or assume it's false.
+  },
+  "include": ["src"], // Ensure TypeScript includes your source directory
+  "references": [{ "path": "./tsconfig.node.json" }] // Keep if you have a separate config for Node/Vite build
+}
