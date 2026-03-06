@@ -81,5 +81,5 @@ Find your build in `dist_electron/`.
 
 <div align="center">
   <p>Built with ❤️ by <a href="https://github.com/darkbitt">darkbitt</a></p>
-  <img src="https://img.shields.io/github/license/darkbitt/Savra?style=flat-square" alt="License">
+  <img src="https://img.shields.io/github/license/darkbitt/Savra?style=flat-square&color=blue" alt="License">
 </div>
