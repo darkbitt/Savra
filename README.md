@@ -1,4 +1,4 @@
-# Savra - Game Sync Manager
+# Savra
 
 Savra is a modern, premium game save synchronization tool built with React, TypeScript, and Electron. It allows you to track your game library, create local and cloud checkpoints, and sync your progress seamlessly across devices using Google Drive and GitHub.
 
