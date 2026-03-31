@@ -20,7 +20,7 @@
 ![Savra Hero Screenshot](assets/Screenshot%202026-03-06%20094240.png)
 
 ## ✨ Core Features
-
+       VIBE CODED RAHHHHHHHHHHHHHHHHHH
 - **🎮 Intelligent Library**: Auto-detects installed games across Steam, Epic, and popular repacks.
 - **☁️ Native Cloud Sync**: Seamless integration with Google Drive and GitHub Releases for secure, versioned backups.
 - **🕒 Checkpoint Engine**: Create unlimited checkpoints for any game, allowing you to roll back progress at any time.
